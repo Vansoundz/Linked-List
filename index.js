@@ -317,7 +317,6 @@ class DoublyList extends SinglyList {
     while (curr) {
       console.log(curr.data, i++)
       curr = curr.next
-
     }
   }
 
@@ -330,12 +329,12 @@ class DoublyList extends SinglyList {
 
 }
 
-  DoublyList.prototype.Node = class Node {
+DoublyList.prototype.Node = class Node {
   constructor(data, next = null, prev = null) {
-  this.data = data
-  this.next = next
-  this.prev = prev
-}
+    this.data = data
+    this.next = next
+    this.prev = prev
+  }
 }
 
 let dl = new DoublyList()
@@ -370,6 +369,10 @@ dl.recRev(dl.head)
 dl.printData()
 console.log("back test")
 dl.printBack()
+console.log("With index")
+dl.printWithIndex()
+console.log("Inherited get at index")
+console.log(dl.getAtIndex(4))
 
 // console.log(dl.head.data)
 // console.log(dl.tail.data)
